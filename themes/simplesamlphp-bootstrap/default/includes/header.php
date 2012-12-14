@@ -139,7 +139,7 @@ if($onLoad !== '') {
             
             echo '<li id="languagebar" class="dropdown">';
             echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Language<b class="caret"></b></a>';
-            echo '<ul class="dropdown-menu" role="menu">';
+            echo '<div class="dropdown-menu" role="menu"><div class="row">';
             $languages = $this->getLanguageList();
             $langnames = array(
                         'no' => 'Bokmål',
@@ -182,14 +182,14 @@ if($onLoad !== '') {
             foreach ($languages AS $lang => $current) {
                 $lang = strtolower($lang);
                 if ($current) {
-                    $textarray[] = '<li class="disabled"><a href="#"><strong>' . $langnames[$lang] . '</strong></a></li>';
+                    $textarray[] = '<span class="span2 disabled"><a href="#"><strong>' . $langnames[$lang] . '</strong></a></span>';
                 } else {
-                    $textarray[] = '<li><a href="' . htmlspecialchars(SimpleSAML_Utilities::addURLparameter(SimpleSAML_Utilities::selfURL(), array('language' => $lang))) . '">' .
-                        $langnames[$lang] . '</a></li>';
+                    $textarray[] = '<span class="span2"><a href="' . htmlspecialchars(SimpleSAML_Utilities::addURLparameter(SimpleSAML_Utilities::selfURL(), array('language' => $lang))) . '">' .
+                        $langnames[$lang] . '</a></span>';
                 }
             }
             echo join(' ', $textarray);
-            echo '</ul>';
+            echo '</div></div>';
             echo '</div>';
 
         }
