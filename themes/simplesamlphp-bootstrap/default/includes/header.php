@@ -52,8 +52,8 @@ if(array_key_exists('header', $this->data)) {
 }
 ?></title>
 
-    <link rel="stylesheet" type="text/css" href="//www.bootstrapcdn.com/bootswatch/2.2.1/cerulean/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="//www.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootswatch/2.2.1/cerulean/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-responsive.min.css" />
 	<link rel="icon" type="image/icon" href="/<?php echo $this->data['baseurlpath']; ?>resources/icons/favicon.ico" />
 
 <?php
